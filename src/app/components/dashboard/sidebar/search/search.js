@@ -17,7 +17,7 @@ export default function Search() {
 
   return (
     <div
-      className="flex bg-gray-100 p-2 rounded-xl text-gray-400"
+      className="flex bg-gray-100 p-2 mx-4 rounded-xl text-gray-400 cursor-pointer"
       onClick={handleOpen}
     >
       Search
