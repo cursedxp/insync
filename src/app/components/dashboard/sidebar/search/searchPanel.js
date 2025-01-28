@@ -13,7 +13,7 @@ export default function SearchPanel() {
   ];
 
   return (
-    <ModalContainer className="bg-black/50">
+    <ModalContainer className="">
       <div className="bg-[#1a1a1a] p-4 rounded-lg text-gray-300 w-[600px] relative">
         <div className="flex justify-between items-center mb-4">
           <div className="flex gap-4">
