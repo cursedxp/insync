@@ -1,9 +1,21 @@
 import Image from "next/image";
 import { FiFolder, FiSearch, FiMoreHorizontal } from "react-icons/fi";
+import { useDispatch } from "react-redux";
+import { setDetailsOpen } from "@/app/store/slices/chatSlice";
+
 export default function ChatHeader() {
+  const dispatch = useDispatch();
+
+  const handleDetailsOpen = () => {
+    dispatch(setDetailsOpen());
+  };
+
   return (
     <div className="flex items-center justify-between p-2 w-full shadow-sm">
-      <div className="flex items-center gap-2">
+      <div
+        className="flex items-center gap-2 cursor-pointer"
+        onClick={handleDetailsOpen}
+      >
         <div className="relative w-12 h-12">
           <Image
             src="/images/users/user-1.jpg"
