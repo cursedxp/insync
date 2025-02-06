@@ -1,13 +1,13 @@
 import Image from "next/image";
 import { FiFolder, FiSearch, FiMoreHorizontal } from "react-icons/fi";
 import { useDispatch } from "react-redux";
-import { setDetailsOpen } from "@/app/store/slices/chatSlice";
+import { toggleDetails } from "@/app/store/slices/chatSlice";
 
 export default function ChatHeader() {
   const dispatch = useDispatch();
 
   const handleDetailsOpen = () => {
-    dispatch(setDetailsOpen());
+    dispatch(toggleDetails());
   };
 
   return (
