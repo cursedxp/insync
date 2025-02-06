@@ -61,7 +61,7 @@ export default function UserDetails() {
           </button>
         </div>
       </div>
-      <div className="space-y-6">
+      <div className="flex flex-col gap-6">
         <div>
           <h3 className="text-gray-500 text-sm mb-4">PROFILE</h3>
           <div className="space-y-3">
@@ -83,7 +83,6 @@ export default function UserDetails() {
             </div>
           </div>
         </div>
-
         <div>
           <h3 className="text-gray-500 text-sm mb-4">ADDRESS</h3>
           <div className="space-y-3">
