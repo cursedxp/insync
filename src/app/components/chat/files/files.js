@@ -77,7 +77,7 @@ export default function Files() {
   ]);
 
   return (
-    <div className="w-full h-full flex flex-col">
+    <div className="w-full p-4 h-full flex flex-col">
       <div className="flex justify-between items-center mb-4">
         <div className="text-lg font-medium"></div>
         <div className="flex gap-2 items-center">

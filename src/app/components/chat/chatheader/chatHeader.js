@@ -1,7 +1,13 @@
 import Image from "next/image";
-import { FiFolder, FiSearch, FiMoreHorizontal } from "react-icons/fi";
+import {
+  FiFolder,
+  FiSearch,
+  FiMoreHorizontal,
+  FiMessageCircle,
+} from "react-icons/fi";
 import { useDispatch } from "react-redux";
 import { toggleDetails } from "@/app/store/slices/chatSlice";
+import { setCurrentTab } from "@/app/store/slices/chatSlice";
 
 export default function ChatHeader() {
   const dispatch = useDispatch();
@@ -30,9 +36,25 @@ export default function ChatHeader() {
         </div>
       </div>
       <div className="flex items-center gap-4 p-2 bg-white ">
-        <FiFolder className="w-5 h-5" />
-        <FiSearch className="w-5 h-5" />
-        <FiMoreHorizontal className="w-5 h-5" />
+        <button
+          className="p-2 rounded-full hover:bg-gray-100"
+          onClick={() => dispatch(setCurrentTab("chat"))}
+        >
+          <FiMessageCircle className="w-5 h-5" />
+        </button>
+        <button
+          className="p-2 rounded-full hover:bg-gray-100"
+          onClick={() => dispatch(setCurrentTab("files"))}
+        >
+          <FiFolder className="w-5 h-5" />
+        </button>
+
+        <button className="p-2 rounded-full hover:bg-gray-100">
+          <FiSearch className="w-5 h-5" />
+        </button>
+        <button className="p-2 rounded-full hover:bg-gray-100">
+          <FiMoreHorizontal className="w-5 h-5" />
+        </button>
       </div>
     </div>
   );
