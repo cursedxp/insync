@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { FiSmile, FiPaperclip, FiMoreHorizontal } from "react-icons/fi";
 
-export default function ChatInput() {
+export default function ChatInput({ className }) {
   const [message, setMessage] = useState("");
 
   const handleSend = () => {
@@ -19,7 +19,7 @@ export default function ChatInput() {
   };
 
   return (
-    <div className="w-full p-4 bg-white">
+    <div className={`${className} w-full bg-white`}>
       <div className="bg-white rounded-lg border border-gray-200 shadow-sm">
         <input
           type="text"
