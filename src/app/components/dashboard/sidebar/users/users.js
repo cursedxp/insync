@@ -37,13 +37,13 @@ export default function Users() {
       initial={{ opacity: 0, y: -10 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.3 }}
-      className="flex flex-col"
+      className="flex flex-col px-4"
     >
       {users.map((user) => (
         <motion.li
           whileHover={{ scale: 1.01 }}
           key={uuidv4()}
-          className="hover:bg-gray-100 cursor-pointer px-4 py-3 hover:shadow-sm"
+          className="hover:bg-gray-100 cursor-pointer px-4 py-3 hover:shadow-sm rounded-2xl"
         >
           <div className="flex justify-between items-center gap-2">
             <div className="flex items-center gap-2">
@@ -65,7 +65,7 @@ export default function Users() {
               </div>
             </div>
             {user.numberOfMessages > 0 && (
-              <div className="rounded-xl bg-green-500 text-white text-xs px-2 py-1">
+              <div className="rounded-full min-w-5 min-h-5 flex items-center justify-center bg-green-500 text-white text-xs px-1 py-0.5">
                 {user.numberOfMessages}
               </div>
             )}

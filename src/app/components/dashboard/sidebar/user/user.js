@@ -8,6 +8,7 @@ export default function User() {
           src="/images/user.jpg"
           alt="user"
           fill
+          sizes="100%"
           className="rounded-full"
         />
         <div className="absolute bottom-0 right-0 bg-green-500 rounded-full w-3 h-3"></div>
