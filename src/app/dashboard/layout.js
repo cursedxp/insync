@@ -1,6 +1,7 @@
 "use client";
 import SideBar from "@/app/components/dashboard/sidebar/sideBar";
 import Chat from "@/app/components/chat/chat";
+import Tasks from "@/app/components/tasks/tasks";
 import { useSelector } from "react-redux";
 export default function DashboardLayout({ children }) {
   const currentFunctionTab = useSelector(
@@ -11,6 +12,7 @@ export default function DashboardLayout({ children }) {
       <div className="p-4 h-screen flex gap-4">
         <SideBar />
         {currentFunctionTab === "chat" && <Chat />}
+        {currentFunctionTab === "tasks" && <Tasks />}
       </div>
       {children}
     </div>
