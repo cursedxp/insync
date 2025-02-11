@@ -24,7 +24,7 @@ export default function Chat() {
           {currentTab === "chat" && (
             <>
               <ChatArea />
-              <ChatInput className="pb-8 px-8 pt-4" />
+              <ChatInput className="pb-8 px-8 pt-4 rounded-b-2xl" />
             </>
           )}
         </div>
