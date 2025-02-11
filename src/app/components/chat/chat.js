@@ -12,7 +12,7 @@ export default function Chat() {
   const currentTab = useSelector((state) => state.chat.currentTab);
 
   return (
-    <div className="w-4/5 rounded-2xl h-full bg-white flex flex-col">
+    <div className="w-full rounded-2xl h-full bg-white flex flex-col">
       <ChatHeader />
       <div className="flex overflow-hidden">
         <div
