@@ -32,7 +32,16 @@ export default function ChatHeader() {
         </div>
         <div className="flex flex-col">
           <p className="text-sm font-medium">Jeniffer Wu</p>
-          <p className="text-xs text-gray-400">Online</p>
+          <div className="flex items-center gap-2">
+            <p className="text-xs text-gray-400">Online</p>
+            <div
+              className="bg-red-100 text-xs px-2 py-1 rounded-md text-red-500 flex items-center gap-2 cursor-auto"
+              onClick={(e) => e.stopPropagation()}
+            >
+              <div className="bg-red-500 w-2 h-2 rounded-full"></div>
+              High
+            </div>
+          </div>
         </div>
       </div>
       <div className="flex items-center gap-4 p-2 bg-white ">
