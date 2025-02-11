@@ -101,7 +101,7 @@ export default function Users() {
                   </div>
                 )}
               </div>
-              <div className="relative w-6 h-6 border-2 border-blue-400 rounded-full">
+              <div className="relative w-6 h-6">
                 <Image
                   src="/images/users/user-7.jpg"
                   alt="User"
