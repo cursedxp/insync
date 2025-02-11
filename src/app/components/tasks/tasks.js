@@ -1,25 +1,19 @@
 import { useState } from "react";
 import Task from "./task";
 import TaskContainer from "./taskContainer";
+import { motion } from "framer-motion";
 import {
   DndContext,
   DragOverlay,
   defaultDropAnimationSideEffects,
   pointerWithin,
   closestCenter,
-  getFirstCollision,
   MouseSensor,
   TouchSensor,
   useSensor,
   useSensors,
 } from "@dnd-kit/core";
-import {
-  SortableContext,
-  verticalListSortingStrategy,
-  arrayMove,
-  sortableKeyboardCoordinates,
-} from "@dnd-kit/sortable";
-import { restrictToWindowEdges } from "@dnd-kit/modifiers";
+import { arrayMove } from "@dnd-kit/sortable";
 
 export default function Tasks() {
   const [tasks, setTasks] = useState([
@@ -210,7 +204,13 @@ export default function Tasks() {
   const lowPriorityTasks = tasks.filter((task) => task.priority === "Low");
 
   return (
-    <div className="w-full rounded-2xl h-full bg-white flex flex-col p-6">
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+      transition={{ ease: "easeInOut", duration: 0.3 }}
+      className="w-full rounded-2xl h-full bg-white flex flex-col p-6"
+    >
       <h1 className="text-2xl font-semibold mb-6">My Tasks</h1>
       <DndContext
         sensors={sensors}
@@ -255,6 +255,6 @@ export default function Tasks() {
           {activeTask ? <Task id={activeTask.id} task={activeTask} /> : null}
         </DragOverlay>
       </DndContext>
-    </div>
+    </motion.div>
   );
 }
